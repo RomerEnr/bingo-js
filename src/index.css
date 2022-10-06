@@ -5,6 +5,16 @@
   --height: 180px;
 }
 
+.cardboard-display {
+  max-width: var(--width);
+  height: var(--height);
+  border: 1px solid red;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  text-align: center;
+}
+
 .app {
   min-height: 100vh;
   display: flex;
@@ -20,17 +30,11 @@
   padding: 40px;
 }
 
-.player-board {
-  max-width: var(--width);
-  height: var(--height);
-  border: 1px solid red;
-  display: flex;
-  gap: 5px;
-  flex-direction: column;
-  text-align: center;
+.player-cardboard {
+  background: white;
 }
 
-.player-content {
+.cardboard {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   padding: 5px;
@@ -65,9 +69,7 @@
 }
 
 .cpu-cardboard {
-  min-width: var(--width);
-  height: var(--height);
-  border: 1px solid red;
+  background: white;
 }
 
 .history-container {
