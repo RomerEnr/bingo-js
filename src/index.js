@@ -1,15 +1,42 @@
+// TODO:
 import { range, shuffle } from "lodash-es";
-let bingoBalls = range(1, 91);
-let playerCard = [];
-let cpuCard = [];
+import { createPumpNumbers } from "./modules/createPumpNumbers.js";
+import { createCpuCard } from "./modules/createCpuCard";
+import { createPlayerCard } from "./modules/createPlayerCard";
+// Player Elements
+const playerCardBoard = document.querySelector(".player-cardboard").children[1];
+let playerCardNumbers = [];
+playerCardNumbers = shuffle(range(1, 91)).slice(0, 15);
 
-const createCard = () => {
-  bingoBalls = range(1, 91);
-  playerCard = shuffle(range(1, 91));
-  playerCard = playerCard.slice(0, 15);
-  cpuCard = range(1, 91).slice(0, 15);
+// Cpu Elements
+const cpuCardBoard = document.querySelector(".cpu-cardboard").children[1];
+let cpuCardNumbers = [];
+cpuCardNumbers = shuffle(range(1, 91)).slice(0, 15);
 
-  console.log(playerCard);
+// Bingo Elements
+const bingoBalls = createPumpNumbers();
+const numberButton = document.querySelector(".btnNumber");
+const pump = document.querySelector(".bingo").children[0];
+const history = document.querySelector(".history");
+
+console.log(pump);
+
+const getPumpNumberAndHistory = () => {
+  const bingoNumber = bingoBalls.pop();
+  pump.textContent = bingoNumber;
+  const historyBox = document.createElement("div");
+  historyBox.classList.add("number");
+  historyBox.textContent = bingoNumber;
+
+  history.append(historyBox);
+  console.log(historyBox);
 };
 
-createCard();
+const main = () => {
+  createPlayerCard(playerCardBoard, playerCardNumbers);
+  createCpuCard(cpuCardBoard, cpuCardNumbers);
+
+  numberButton.addEventListener("click", getPumpNumberAndHistory);
+};
+
+main();
