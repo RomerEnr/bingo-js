@@ -1,6 +1,3 @@
-// TODO: Preguntar a Manz sobre export e import de newNumber porque no funciona al hacer export
-// También me da problemas con el import de la función checkWinner
-// Idea en archivo temporal sobre como verificar por posición, para no quitar la idea lo deje por defecto pero lo guardé por si podiamos implementarlo en clase.
 import { range, shuffle } from "lodash-es";
 import { createCpuCard } from "./modules/createCpuCard.js";
 import { createPlayerCard } from "./modules/createPlayerCard.js";
