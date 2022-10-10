@@ -5,6 +5,7 @@ import { range, shuffle } from "lodash-es";
 import { createCpuCard } from "./modules/createCpuCard";
 import { createPlayerCard } from "./modules/createPlayerCard";
 import { createPumpNumbers } from "./modules/createPumpNumbers";
+import { animatize } from "./modules/animatize";
 
 // Player Elements
 const playerCardBoard = document.querySelector(".player-cardboard").children[1];
@@ -25,6 +26,7 @@ const replaceNumberArray = (arr, item) => {
   const i = arr.indexOf(item);
   arr[i] = "X";
 };
+animatize();
 
 export const pump = document.querySelector(".bingo").children[0];
 const newNumber = () => {
@@ -39,18 +41,14 @@ const newNumber = () => {
   }
 
   if (playerCardNumbers.includes(bingoNumber)) {
-    console.log("estoy entrando player", bingoNumber);
     replaceNumberArray(playerCardNumbers, bingoNumber);
-    console.log(playerCardNumbers);
 
     // console.log(playerCardNumbers, "Tarjeta jugador");
     // console.log(matrixNumberPlayer);
   }
 
   if (cpuCardNumbers.includes(bingoNumber)) {
-    console.log("estoy entrando cpu", bingoNumber);
     replaceNumberArray(cpuCardNumbers, bingoNumber);
-    console.log(cpuCardNumbers);
 
     // console.log(cpuCardNumbers, "Tarjeta cpu");
     // console.log(matrixNumberCpu);
@@ -73,11 +71,11 @@ const checkWinner = (playerArr, cpuArr, element) => {
 
   if (playerArr.every((el) => el === "X")) {
     win = true;
-    pump.textContent = "¡Jugador Gana!";
+    pump.textContent = "¡Player Wins! 🎉";
   }
   if (cpuArr.every((el) => el === "X")) {
     win = true;
-    pump.textContent = "¡CPU Gana!";
+    pump.textContent = "¡CPU Wins! 😔";
   }
 
   if (win) {
