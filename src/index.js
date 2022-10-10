@@ -26,7 +26,6 @@ const replaceNumberArray = (arr, item) => {
   const i = arr.indexOf(item);
   arr[i] = "X";
 };
-animatize();
 
 export const pump = document.querySelector(".bingo").children[0];
 const newNumber = () => {
@@ -85,6 +84,7 @@ const checkWinner = (playerArr, cpuArr, element) => {
 };
 
 const main = () => {
+  animatize();
   createPlayerCard(playerCardBoard, playerCardNumbers);
   createCpuCard(cpuCardBoard, cpuCardNumbers);
   numberButton.addEventListener("click", newNumber);
