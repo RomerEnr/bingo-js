@@ -30,6 +30,8 @@
   "keywords": [],
   "license": "ISC",
   "dependencies": {
+    "animejs": "^3.2.1",
+    "canvas-confetti": "^1.5.1",
     "lodash-es": "^4.17.21"
   }
 }

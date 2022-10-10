@@ -1,3 +1,5 @@
+import anime from "animejs";
+
 export const animatize = () => {
   const textWrapper = document.querySelector(".ml9 .letters");
   textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");

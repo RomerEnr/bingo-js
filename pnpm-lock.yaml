@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@stylelint/postcss-css-in-js': ^0.38.0
+  animejs: ^3.2.1
+  canvas-confetti: ^1.5.1
   eslint: ^8.24.0
   eslint-config-standard: 17.0.0-1
   eslint-plugin-import: ^2.26.0
@@ -20,6 +22,8 @@ specifiers:
   vite: ^3.1.0
 
 dependencies:
+  animejs: 3.2.1
+  canvas-confetti: 1.5.1
   lodash-es: 4.17.21
 
 devDependencies:
@@ -433,6 +437,10 @@ packages:
       uri-js: 4.4.1
     dev: true
 
+  /animejs/3.2.1:
+    resolution: {integrity: sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==}
+    dev: false
+
   /ansi-regex/5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
     engines: {node: '>=8'}
@@ -572,6 +580,10 @@ packages:
   /caniuse-lite/1.0.30001416:
     resolution: {integrity: sha512-06wzzdAkCPZO+Qm4e/eNghZBDfVNDsCgw33T27OwBH9unE9S478OYw//Q2L7Npf/zBzs7rjZOszIFQkwQKAEqA==}
     dev: true
+
+  /canvas-confetti/1.5.1:
+    resolution: {integrity: sha512-Ncz+oZJP6OvY7ti4E1slxVlyAV/3g7H7oQtcCDXgwGgARxPnwYY9PW5Oe+I8uvspYNtuHviAdgA0LfcKFWJfpg==}
+    dev: false
 
   /chalk/2.4.2:
     resolution: {integrity: sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==}
